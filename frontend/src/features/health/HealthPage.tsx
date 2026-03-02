@@ -11,7 +11,7 @@ const HealthPage = () => {
       try {
         const data = await getHealthStatus();
         setStatus(data);
-      } catch (err) {
+      } catch {
         setError("Failed to connect to API");
       } finally {
         setLoading(false);
