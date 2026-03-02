@@ -1,3 +1,5 @@
+using FIRY_Master.Domain.Entities;
+
 namespace FIRY_Master.Domain.Interfaces;
 
 public interface IRbacRepository
@@ -6,7 +8,8 @@ public interface IRbacRepository
     Task<int> CreateUserAsync(string username, string passwordHash, int roleId);
     Task<int> CreatePageAsync(string pageName, string route);
     Task SetRolePagePermissionsAsync(int roleId, IEnumerable<int> pageIds);
-    Task<IReadOnlyList<object>> GetRolesAsync();
-    Task<IReadOnlyList<object>> GetUsersAsync();
-    Task<IReadOnlyList<object>> GetPagesAsync();
+    Task<IReadOnlyList<RoleDto>> GetRolesAsync();
+    Task<IReadOnlyList<UserDto>> GetUsersAsync();
+    Task<IReadOnlyList<PageDto>> GetPagesAsync();
+    Task<IReadOnlyList<int>> GetPageIdsByRoleIdAsync(int roleId);
 }

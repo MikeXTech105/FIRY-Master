@@ -44,4 +44,7 @@ public class RbacController : ControllerBase
 
     [HttpGet("pages")]
     public async Task<IActionResult> GetPages() => Ok(await _rbacService.GetPagesAsync());
+
+    [HttpGet("permissions/{roleId:int}")]
+    public async Task<IActionResult> GetPermissionsByRole(int roleId) => Ok(await _rbacService.GetPageIdsByRoleIdAsync(roleId));
 }

@@ -1,8 +1,16 @@
+import { useAuth } from "../auth/auth.state";
+
 const DashboardPage = () => {
+  const { auth } = useAuth();
+
   return (
-    <div>
-      <h2>Dashboard</h2>
-      <p>This is a blank dashboard page for now.</p>
+    <div className="page">
+      <h1>Dashboard</h1>
+      <div className="card">
+        <p>Welcome, <strong>{auth?.username}</strong>.</p>
+        <p>Your role is <strong>{auth?.role}</strong>.</p>
+        <p>Use the sidebar to navigate pages based on your permissions.</p>
+      </div>
     </div>
   );
 };
