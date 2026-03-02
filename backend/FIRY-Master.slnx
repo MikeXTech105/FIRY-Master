@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="FIRY-Master.API/FIRY-Master.API.csproj" Id="31c2f37c-f1e5-4899-aa75-b5ee82c8606e" />
+  <Project Path="FIRY-Master.Application/FIRY-Master.Application.csproj" Id="19b0774b-77f4-43b4-ba34-357be2a91e59" />
+  <Project Path="FIRY-Master.Domain/FIRY-Master.Domain.csproj" Id="a154fb98-53ce-472b-be18-e6181ab3a5e3" />
+  <Project Path="FIRY-Master.Infrastructure/FIRY-Master.Infrastructure.csproj" Id="cf627655-f30e-406b-9f88-7eaf7f21d635" />
+</Solution>
