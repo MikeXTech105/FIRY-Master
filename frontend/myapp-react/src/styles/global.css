@@ -1,0 +1,48 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #0a0a0a; color: #fff; }
+
+.center-screen { min-height: 100vh; display: grid; place-items: center; }
+.card {
+  background: #141414;
+  border: 1px solid #272727;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+form.card { min-width: 340px; display: flex; flex-direction: column; gap: .8rem; }
+input, select, button {
+  background: #0f0f0f;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: .65rem .8rem;
+}
+button { cursor: pointer; background: #1f6feb; border: none; }
+.error { color: #ff6b6b; }
+
+.app-shell { display: flex; min-height: 100vh; }
+.sidebar {
+  width: 230px;
+  background: #111;
+  border-right: 1px solid #252525;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: width .2s;
+}
+.sidebar.collapsed { width: 72px; }
+.sidebar .logo { font-weight: 700; letter-spacing: .06rem; }
+.sidebar nav { display: flex; flex-direction: column; gap: .6rem; }
+.sidebar a { color: #bbb; text-decoration: none; padding: .45rem; border-radius: 6px; }
+.sidebar a.active, .sidebar a:hover { color: #fff; background: #202020; }
+.collapse-btn, .logout { background: #202020; }
+.main-content { flex: 1; padding: 1.2rem; }
+
+.form-inline { display: grid; grid-template-columns: repeat(2, minmax(160px, 1fr)); gap: .75rem; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: .6rem; border-bottom: 1px solid #2e2e2e; }
